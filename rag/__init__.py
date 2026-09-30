@@ -1,0 +1,1 @@
+"""RAG package for the groundwater dashboard assistant."""

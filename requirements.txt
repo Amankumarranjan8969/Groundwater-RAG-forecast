@@ -1,0 +1,22 @@
+streamlit>=1.36,<2
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+statsmodels>=0.14
+plotly>=5.22
+openpyxl>=3.1
+
+# These reproduce the boosted-model portion of the notebook. The app continues
+# with its core scikit-learn suite if any optional package cannot be installed.
+xgboost>=2.0
+lightgbm>=4.3
+catboost>=1.2
+mrmr-selection>=0.2
+
+# Optional: enables the LSTM model on the "12 · Deep learning" tab. The PINN,
+# reservoir-computing (ESN), and SARIMA models on that same tab need only the
+# packages already listed above (NumPy and statsmodels), so the tab works
+# fine without this — LSTM just shows as "Not installed" in its availability
+# table, the same way CatBoost/XGBoost/LightGBM would if they were missing.
+torch>=2.2
