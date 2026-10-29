@@ -45,4 +45,9 @@ This family never touches the six-model Taylor diagrams or cross-season views �
 - Forecasts are clearly labelled as scenarios: future rainfall, soil moisture, vegetation, and other non-target variables are held at the latest measured state, while DTWL-history features update recursively.
 - **Small datasets**: if a season doesn't have enough complete rows for the train/validation/test split, the pipeline automatically retries by imputing incomplete lag/rolling/trend values within each village (forward-fill, then median) instead of dropping those rows — raw measurements and the target itself are never touched. A notice appears on the Data quality tab whenever this happens, and it only kicks in when the strict, notebook-faithful pass wasn't enough on its own.
 - The chat assistant (bottom of the page) answers from the methodology docs in `rag/knowledge_base/` and, once you've run an analysis, the live numbers from your session — including the deep-learning tab and whether the low-data rescue above kicked in for a season. It optionally calls Gemini or Claude if `GEMINI_API_KEY` or `ANTHROPIC_API_KEY` is set (see `rag/llm_provider.py`); otherwise it composes answers locally.
+## 📜 License
 
+This project is licensed under the **MIT License** - see the [`LICENSE`](LICENSE) file for details.
+
+Developed with ❤️ by **Aman Kumar Ranjan (23010301)** for **NIH ROORKEE (Got of India)**.
+=======
